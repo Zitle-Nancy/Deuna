@@ -1,15 +1,14 @@
 import { UserInformationProps } from "./types";
 
 export const UserInformation = ({
-  userName,
-  email,
-  address,
-  phoneNumber,
-}: UserInformationProps) => {
+  dataUser: { userName, email, address, phoneNumber },
+}: {
+  dataUser: UserInformationProps;
+}) => {
   return (
     <div className="rounded-b-xl bg-white h-[200px]">
       <p>
-        <span>Nombre:</span>
+        <span>Name:</span>
         <span>{userName}</span>
       </p>
       <p>
@@ -17,11 +16,11 @@ export const UserInformation = ({
         <span>{email}</span>
       </p>
       <p>
-        <span>Dirreción:</span>
+        <span>Address:</span>
         <span>{address}</span>
       </p>
       <p>
-        <span>Número telefónico:</span>
+        <span>Phone Number:</span>
         <span>{phoneNumber}</span>
       </p>
     </div>
